@@ -1,0 +1,111 @@
+{
+  // Place your frodo-console workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "React Component with Material, PropTypes": {
+    "prefix": "rcom",
+    "body": [
+      "// @flow",
+      "import React from \"react\";",
+      "import type { Node } from \"react\";",
+      "import { makeStyles } from \"@material-ui/core/styles\";",
+      "",
+      "//Local Imports",
+      "",
+      "//Material UI Styles",
+      "const useStyles = makeStyles(({spacing, palette}) => ({",
+      "// Add your styles here",
+      "}));",
+      "",
+      "type Props = {};",
+      "",
+      "export const $TM_FILENAME_BASE = (props :Props):Node => {",
+      "  const classes = useStyles();",
+      "",
+      "  return(",
+      "    <React.Fragment>",
+      "      $2",
+      "    </React.Fragment>",
+      "  );",
+      "};",
+      "",
+    ],
+    "description": "React Component with Material, PropTypes"
+  },
+
+  "React GraphQL Component with query": {
+    "prefix": "rglcom",
+    "body": [
+      "// @flow",
+      "import React, { useContext } from \"react\";",
+      "import type { Node } from \"react\";",
+      "import { makeStyles } from \"@material-ui/core/styles\";",
+      "import { observer } from \"mobx-react\"";
+      "",
+      "//Local Imports",
+      "import { StoreContext } from \"@Models\";",
+      "",
+      "//Material UI Styles",
+      "const useStyles = makeStyles(({spacing, palette}) => ({",
+      "// Add your styles here",
+      "}));",
+      "",
+      "type Props = {};",
+      "",
+      "const $TM_FILENAME_BASE = (props: Props): Node => {",
+      "const classes = useStyles();",
+      "const store = useContext(StoreContext);",
+      "",
+      "  return (",
+      "    <React.Fragment>",
+      "     $3",
+      "    </React.Fragment>",
+      "  );",
+      "};",
+      "",
+      "export default (observer($TM_FILENAME_BASE): Node);"
+    ],
+    "description": "React GraphQL Component"
+  },
+  "Sub Component": {
+    "prefix": "rsubcom",
+    "body": [
+      "/*",
+      " ********  ******** ********",
+      " *** $1 Component ***",
+      " ******** ******** ********",
+      " */",
+      "",
+      "const use$1Styles = makeStyles(({spacing, palette}) => ({",
+      "    // Add Styles here",
+      "}));",
+      "",
+      "type $1Props = {};",
+      "",
+      "export const $1 = (props: $1Props): Node => {",
+      "  const classes = use$1Styles();",
+      "",
+      "  return (",
+      "    <React.Fragment>",
+      "      $2",
+      "    </React.Fragment>",
+      "  )",
+      "};"
+    ],
+    "description": "Sub Component"
+  }
+}

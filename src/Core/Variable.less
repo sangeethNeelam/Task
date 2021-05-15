@@ -1,0 +1,25 @@
+@mobile: ~"screen and (max-width: 540px)";
+@mobileLand: ~"screen and (max-width: 768px) and (orientation: landscape)";
+@ipad: ~"screen and (min-width: 1024px)";
+
+// Logo Gradient Colors
+@logo-blu-dark: #13139a;
+@logo-blu-light: #4141c4;
+.blu-bg-right {
+  background: linear-gradient(to right, @logo-blu-dark, @logo-blu-light);
+}
+.red-bg {
+  background: linear-gradient(#aa2a64, #b73264, #d84964, #f45c64);
+}
+.red-bg-right {
+  background: linear-gradient(to right, #aa2a64, #b73264, #d84964, #f45c64);
+}
+.ylw-bg {
+  background: linear-gradient(#ffde5b, #fec15d, #fead5f, #fea660);
+}
+
+// Box Shadow
+.pop-shw {
+  box-shadow: 0px 0px 20px -5px rgba(102, 102, 102, 0.5);
+  border-radius: 10px;
+}
